@@ -4,6 +4,8 @@ const request = require("request-promise-native");
 
 const app = express();
 
+app.get("/", (req, res) => res.send("hi"));
+
 app.get('/op404alertfios', (req, res) => {
     request({
         uri: 'https://api.observepoint.com/v2/web-audits/44210/runs/657479/results/tag/status-codes',
